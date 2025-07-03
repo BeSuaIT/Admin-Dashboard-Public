@@ -1,0 +1,115 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.popup {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.popup h2 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 20px;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #34495e;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.submitButton,
+.cancelButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.submitButton {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.submitButton:hover {
+  background-color: #27ae60;
+  transform: translateY(-1px);
+}
+
+.cancelButton {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.cancelButton:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .popup {
+    padding: 16px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .submitButton,
+  .cancelButton {
+    width: 100%;
+  }
+}

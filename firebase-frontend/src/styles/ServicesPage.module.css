@@ -1,0 +1,354 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.addButton {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #229954;
+}
+
+.toolBar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 300px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.searchIcon {
+  color: #666;
+  margin-right: 8px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.searchInput::placeholder {
+  color: #999;
+}
+
+.tabsContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+}
+
+.tab {
+  background: #f8f9fa;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: #e9ecef;
+  color: #495057;
+}
+
+.activeTab {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.activeTab:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 15px;
+  border-left: 4px solid #3498db;
+}
+
+.statsText {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.servicesContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.roomCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.roomCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.roomImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.roomImage:hover {
+  transform: scale(1.05);
+}
+
+.serviceInfo {
+  padding: 20px;
+}
+
+.roomTitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.roomPrice {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 8px;
+}
+
+.ownerName,
+.serviceStats,
+.createdDate {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.viewButton {
+  flex: 1;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  text-align: center;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewButton:hover {
+  background-color: #0056b3;
+}
+
+.buttonDelete {
+  flex: 1;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  text-align: center;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonDelete:hover {
+  background-color: #c82333;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+  grid-column: 1 / -1;
+}
+
+.noData {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.noData p {
+  margin: 0;
+  font-size: 16px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .searchBar {
+    width: 100%;
+  }
+
+  .tabs {
+    justify-content: center;
+  }
+
+  .tab {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .statsContainer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .roomGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceInfo {
+    padding: 15px;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .viewButton,
+  .buttonDelete {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    width: 100%;
+  }
+
+  .roomTitle {
+    font-size: 16px;
+  }
+
+  .roomPrice {
+    font-size: 15px;
+  }
+
+  .searchBar {
+    width: 100%;
+    padding: 6px 12px;
+  }
+}

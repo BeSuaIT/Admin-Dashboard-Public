@@ -1,0 +1,130 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+  padding: 20px;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content {
+  padding: 30px;
+  text-align: center;
+}
+
+.content p {
+  margin: 10px 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e74c3c;
+  background: #ffeaa7;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 10px 0;
+  border: 2px solid #fdcb6e;
+}
+
+.actions {
+  display: flex;
+  gap: 15px;
+  padding: 0 30px 30px;
+}
+
+.continueButton {
+  flex: 1;
+  background: linear-gradient(135deg, #00b894, #00a085);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.continueButton:hover {
+  background: linear-gradient(135deg, #00a085, #00947a);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 184, 148, 0.3);
+}
+
+.logoutButton {
+  flex: 1;
+  background: linear-gradient(135deg, #e17055, #d63031);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: linear-gradient(135deg, #d63031, #c0392b);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(214, 48, 49, 0.3);
+}
+
+@media (max-width: 480px) {
+  .modal {
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .timer {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,141 @@
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.errorContent {
+  background: white;
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+.errorCode {
+  font-size: 120px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.errorTitle {
+  font-size: 28px;
+  color: #2c3e50;
+  margin: 20px 0 15px 0;
+  font-weight: 600;
+}
+
+.errorMessage {
+  font-size: 16px;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.errorActions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.primaryButton:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #7f8c8d;
+  border: 2px solid #bdc3c7;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.secondaryButton:hover {
+  background-color: #ecf0f1;
+  border-color: #95a5a6;
+  color: #2c3e50;
+}
+
+.errorDetails {
+  margin: 30px 0;
+  text-align: left;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.errorDetails summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.errorStack {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .errorContainer {
+    padding: 15px;
+  }
+  
+  .errorContent {
+    padding: 40px 30px;
+  }
+  
+  .errorCode {
+    font-size: 80px;
+  }
+  
+  .errorTitle {
+    font-size: 24px;
+  }
+  
+  .errorActions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 200px;
+  }
+}

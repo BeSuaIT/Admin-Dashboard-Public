@@ -1,0 +1,279 @@
+.container {
+  padding: 24px;
+  width: 100%;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.backButton {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: #2980b9;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+  color: #2c3e50;
+  flex: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.imageContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mainImage,
+.secondaryImage {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.mainImage:hover,
+.secondaryImage:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
+.serviceImage {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.serviceImage:hover {
+  transform: scale(1.05);
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.priceSection,
+.soldSection {
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.priceLabel,
+.soldLabel {
+  font-size: 16px;
+  color: #2c3e50;
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.priceValue {
+  font-size: 20px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.soldValue {
+  font-size: 18px;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.descriptionSection {
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.descriptionSection h3 {
+  margin: 0 0 12px 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+.description {
+  color: #34495e;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.loading {
+  color: #7f8c8d;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.zoomOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.zoomContainer {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.zoomImage {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.closeZoom {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s ease;
+}
+
+.closeZoom:hover {
+  transform: scale(1.1);
+}
+
+.ownerSection {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ownerLabel {
+  font-weight: 500;
+  color: #495057;
+}
+
+.ownerInfo {
+  color: #212529;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ownerEmail {
+  color: #6c757d;
+  font-size: 0.9em;
+  margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .imageContainer {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .imageContainer {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .mainImage,
+  .secondaryImage {
+    aspect-ratio: 4/3;
+  }
+}
+
+.editButton {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.editButton:hover {
+  background-color: #e67e22;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.editButton:active {
+  transform: translateY(0);
+}
